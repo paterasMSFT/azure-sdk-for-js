@@ -581,6 +581,11 @@
       "packageName": "@azure/digital-twins-core",
       "projectFolder": "sdk/digitaltwins/digital-twins-core",
       "versionPolicyName": "client"
+    },
+    {
+      "packageName": "@azure/design-tutorial",
+      "projectFolder": "sdk/learn/design-tutorial",
+      "versionPolicyName": "client"
     }
   ]
 }

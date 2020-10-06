@@ -165,7 +165,12 @@
       "path": "sdk/test-utils/perfstress"
     },
     {
-      "path": "sdk\\digitaltwins\\digital-twins-core"
+      "name": "design tutorial",
+      "path": "sdk/api-learn/design-tutorial"
+    },
+    {
+      "name": "digital twins",
+      "path": "sdk/digitaltwins/digital-twins"
     }
   ],
   "settings": {
@@ -195,6 +200,9 @@
     "typescript.tsdk": "core-http/node_modules/typescript/lib"
   },
   "extensions": {
-    "recommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode"
+    ]
   }
 }

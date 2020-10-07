@@ -169,6 +169,10 @@
       "path": "sdk/api-learn/design-tutorial"
     },
     {
+      "name": "implementation tutorial",
+      "path": "sdk/api-learn/implementation-tutorial"
+    },
+    {
       "name": "digital twins",
       "path": "sdk/digitaltwins/digital-twins"
     }

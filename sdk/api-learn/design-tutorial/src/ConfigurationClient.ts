@@ -8,7 +8,9 @@ export { ConfigurationSetting } from "./generated/models";
 
 export interface ConfigurationClientOptions extends PipelineOptions {}
 
-export interface GetConfigurationSettingOptions extends OperationOptions {}
+export interface GetConfigurationSettingOptions extends OperationOptions {
+  onlyIfChanged?: boolean;
+}
 
 export class ConfigurationClient {
   constructor(
@@ -21,6 +23,16 @@ export class ConfigurationClient {
 
   public async getConfigurationSetting(
     _key: string,
+    _options?: GetConfigurationSettingOptions
+  ): Promise<ConfigurationSetting>;
+
+  public async getConfigurationSetting(
+    setting: ConfigurationSetting,
+    options?: GetConfigurationSettingOptions
+  ): Promise<ConfigurationSetting>;
+
+  public async getConfigurationSetting(
+    _keyOrSetting: string | ConfigurationSetting,
     _options: GetConfigurationSettingOptions = {}
   ): Promise<ConfigurationSetting> {
     throw new Error("Not yet implemented.");

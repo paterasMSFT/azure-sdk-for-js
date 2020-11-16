@@ -21,4 +21,15 @@ describe("functionality tests", () => {
     const result = await client.getConfigurationSetting("bestColor");
     assert.equal(result.value, "green");
   });
+
+  it("can conditionally retrieve values", async () => {
+    const result = await client.getConfigurationSetting("bestCOlor");
+    let valueHasNotChanged = false;
+    try {
+      await client.getConfigurationSetting(result, { onlyIfChanged: true });
+    } catch (e) {
+      valueHasNotChanged = true;
+    }
+    assert.isTrue(valueHasNotChanged, "Expected value to stay the same.");
+  });
 });
